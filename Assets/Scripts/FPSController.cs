@@ -16,12 +16,9 @@ public class FPSController : MonoBehaviour
     public float mouseHorizontal = 3.0f;
     public float mouseVertical = 2.0f;
 
-
-
     public float minRotation = -65.0f;
     public float maxRotation = 60.0f;
     float h_mouse, v_mouse;
-
 
     private Vector3 move = Vector3.zero;
     void Start()
@@ -29,7 +26,6 @@ public class FPSController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;
-
     }
 
     void Update()
@@ -43,7 +39,6 @@ public class FPSController : MonoBehaviour
         cam.transform.localEulerAngles = new Vector3(-v_mouse, 0, 0);
 
         transform.Rotate(0, h_mouse, 0);
-
 
         if (characterController.isGrounded)
         {
